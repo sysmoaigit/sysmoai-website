@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SYSmoAI builds AI-powered business operating systems and workflow automation for SMEs in emerging markets. Productized AI services — not an agency.">
+<meta name="keywords" content="AI business setup, AI automation, workflow automation, AI operating system, Bangladesh AI, SYSmoAI">
+<meta property="og:title" content="SYSmoAI — AI Business Operating Systems">
+<meta property="og:description" content="Build AI-first businesses that run autonomously. Productized AI services for SMEs.">
+<meta property="og:url" content="https://sysmoai.com">
+<meta name="twitter:card" content="summary_large_image">
+<title>SYSmoAI — AI Business Operating Systems</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,sans-serif;background:#060B14;color:#E2E8F0;line-height:1.7;overflow-x:hidden}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;background:rgba(6,11,20,.92);backdrop-filter:blur(20px);z-index:100;border-bottom:1px solid rgba(56,189,248,.1)}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+.logo{font-size:24px;font-weight:900;letter-spacing:-.5px;color:#38BDF8;text-decoration:none}
+.logo span{color:#F8FAFC}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{color:#94A3B8;text-decoration:none;font-size:14px;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:#38BDF8}
+.nav-cta{background:linear-gradient(135deg,#38BDF8,#2DD4BF);color:#060B14;padding:10px 24px;border-radius:10px;font-weight:700;font-size:14px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 25px rgba(56,189,248,.25)}
+
+/* HERO */
+.hero{padding:160px 0 100px;text-align:center;position:relative}
+.hero::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(56,189,248,.08),transparent 70%);pointer-events:none}
+.hero-badge{display:inline-block;background:rgba(56,189,248,.1);border:1px solid rgba(56,189,248,.2);padding:8px 20px;border-radius:50px;color:#38BDF8;font-size:13px;font-weight:600;margin-bottom:28px}
+.hero h1{font-size:clamp(36px,7vw,72px);font-weight:900;line-height:1.1;letter-spacing:-2px;margin-bottom:24px}
+.hero h1 span{background:linear-gradient(135deg,#38BDF8,#2DD4BF,#818CF8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{font-size:20px;color:#94A3B8;max-width:680px;margin:0 auto 40px;line-height:1.7}
+.hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-primary{background:linear-gradient(135deg,#38BDF8,#2DD4BF);color:#060B14;padding:16px 40px;border-radius:14px;font-size:17px;font-weight:700;text-decoration:none;transition:all .3s}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 35px rgba(56,189,248,.3)}
+.btn-secondary{border:1px solid rgba(56,189,248,.3);color:#38BDF8;padding:16px 40px;border-radius:14px;font-size:17px;font-weight:600;text-decoration:none;transition:all .3s}
+.btn-secondary:hover{background:rgba(56,189,248,.05);border-color:rgba(56,189,248,.5)}
+
+/* PROBLEM/SOLUTION */
+.ps-section{padding:80px 0}
+.ps-section h2{font-size:clamp(28px,4vw,44px);font-weight:800;text-align:center;margin-bottom:16px}
+.ps-section .sub{text-align:center;color:#64748B;font-size:18px;margin-bottom:60px}
+.ps-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;max-width:1000px;margin:0 auto}
+.ps-box{background:linear-gradient(135deg,rgba(239,68,68,.08),rgba(239,68,68,.02));border:1px solid rgba(239,68,68,.15);border-radius:20px;padding:40px}
+.ps-box.green{background:linear-gradient(135deg,rgba(74,222,128,.08),rgba(74,222,128,.02));border:1px solid rgba(74,222,128,.15)}
+.ps-box h3{font-size:22px;margin-bottom:16px}
+.ps-box ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+.ps-box ul li{color:#94A3B8;font-size:15px;padding-left:24px;position:relative}
+.ps-box ul li::before{content:'✕';position:absolute;left:0;color:#EF4444;font-weight:700}
+.ps-box.green ul li::before{content:'✓';color:#4ADE80}
+
+/* SERVICES */
+#services h2{font-size:clamp(28px,4vw,44px);font-weight:800;text-align:center;margin-bottom:16px}
+#services{padding:100px 0}
+#services .sub{text-align:center;color:#64748B;font-size:18px;margin-bottom:60px}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px}
+.service-card{background:rgba(15,23,42,.6);border:1px solid rgba(51,65,85,.5);border-radius:20px;padding:36px;transition:all .3s;position:relative;overflow:hidden}
+.service-card:hover{border-color:rgba(56,189,248,.3);transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,.3)}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#38BDF8,#2DD4BF);opacity:0;transition:opacity .3s}
+.service-card:hover::before{opacity:1}
+.service-icon{font-size:36px;margin-bottom:20px}
+.service-card h3{font-size:22px;font-weight:700;margin-bottom:12px;color:#F8FAFC}
+.service-card p{color:#94A3B8;font-size:15px;margin-bottom:20px;line-height:1.7}
+.service-features{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:24px}
+.service-features li{color:#64748B;font-size:14px;padding-left:20px;position:relative}
+.service-features li::before{content:'→';position:absolute;left:0;color:#38BDF8}
+.service-price{font-size:28px;font-weight:800;color:#38BDF8;margin-bottom:16px}
+.service-price span{font-size:14px;color:#64748B;font-weight:400}
+.service-cta{display:inline-block;width:100%;text-align:center;background:linear-gradient(135deg,#38BDF8,#2DD4BF);color:#060B14;padding:14px;border-radius:12px;font-weight:700;text-decoration:none;font-size:15px;transition:all .3s}
+.service-cta:hover{box-shadow:0 8px 25px rgba(56,189,248,.25)}
+
+/* HOW IT WORKS */
+#how{padding:100px 0}
+#how h2{font-size:clamp(28px,4vw,44px);font-weight:800;text-align:center;margin-bottom:60px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;max-width:1000px;margin:0 auto}
+.step{text-align:center;padding:24px}
+.step-num{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#38BDF8,#2DD4BF);color:#060B14;font-size:24px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.step h4{font-size:18px;font-weight:700;margin-bottom:8px}
+.step p{color:#94A3B8;font-size:14px}
+
+/* PROOF */
+#proof{padding:100px 0;background:linear-gradient(180deg,transparent,rgba(56,189,248,.03),transparent)}
+#proof h2{font-size:clamp(28px,4vw,44px);font-weight:800;text-align:center;margin-bottom:16px}
+#proof .sub{text-align:center;color:#64748B;font-size:18px;margin-bottom:60px}
+.proof-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
+.proof-card{background:rgba(15,23,42,.6);border:1px solid rgba(51,65,85,.5);border-radius:16px;padding:28px;text-align:center}
+.proof-card .num{font-size:48px;font-weight:900;background:linear-gradient(135deg,#38BDF8,#818CF8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.proof-card .label{color:#94A3B8;font-size:15px;margin-top:8px}
+
+/* FOUNDER */
+#founder{padding:100px 0}
+.founder-card{background:rgba(15,23,42,.6);border:1px solid rgba(51,65,85,.5);border-radius:24px;padding:48px;display:flex;gap:40px;align-items:center;max-width:900px;margin:0 auto}
+.founder-avatar{width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,#38BDF8,#818CF8);display:flex;align-items:center;justify-content:center;font-size:48px;font-weight:900;color:#060B14;flex-shrink:0}
+.founder-info h3{font-size:24px;font-weight:800;margin-bottom:4px}
+.founder-info .role{color:#38BDF8;font-size:14px;font-weight:600;margin-bottom:12px}
+.founder-info p{color:#94A3B8;font-size:15px;line-height:1.7}
+.founder-links{margin-top:12px;display:flex;gap:12px}
+.founder-links a{color:#38BDF8;font-size:13px;text-decoration:none;font-weight:600}
+
+/* CTA */
+#cta{padding:100px 0;text-align:center}
+#cta h2{font-size:clamp(28px,4vw,48px);font-weight:800;margin-bottom:16px}
+#cta p{color:#94A3B8;font-size:18px;margin-bottom:32px}
+
+/* FOOTER */
+footer{padding:60px 0 30px;border-top:1px solid rgba(51,65,85,.3);text-align:center}
+footer p{color:#475569;font-size:14px}
+footer a{color:#38BDF8;text-decoration:none}
+.footer-email{margin-top:8px;font-size:14px}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .ps-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .founder-card{flex-direction:column;text-align:center;padding:32px}
+  .nav-links{display:none}
+  .hero{padding:120px 0 60px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a href="#" class="logo">SYS<span>moAI</span></a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#how">Process</a></li>
+      <li><a href="#proof">Results</a></li>
+      <li><a href="#founder">Founder</a></li>
+    </ul>
+    <a href="#cta" class="nav-cta">Get Started</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">🚀 Productized AI Services — Not an Agency</div>
+    <h1>Your Business.<br><span>AI-Powered.</span></h1>
+    <p>SYSmoAI builds intelligent operating systems for businesses that want AI without hiring a technical team. Fixed-price packages. Clear deliverables. No retainer required.</p>
+    <div class="hero-ctas">
+      <a href="#services" class="btn-primary">See Service Packages</a>
+      <a href="#how" class="btn-secondary">How It Works →</a>
+    </div>
+  </div>
+</section>
+
+<section class="ps-section">
+  <div class="container">
+    <h2>Before SYSmoAI → After SYSmoAI</h2>
+    <p class="sub">Most businesses want AI but can't afford a tech team. We fixed that.</p>
+    <div class="ps-grid">
+      <div class="ps-box">
+        <h3 style="color:#EF4444">❌ Without SYSmoAI</h3>
+        <ul>
+          <li>Manual workflows eating 20+ hours/week</li>
+          <li>No AI integration — falling behind competitors</li>
+          <li>Can't afford $5K-$15K/month tech hires</li>
+          <li>Scattered tools, no operating system</li>
+          <li>Reactive support, missed opportunities</li>
+        </ul>
+      </div>
+      <div class="ps-box green">
+        <h3 style="color:#4ADE80">✅ With SYSmoAI</h3>
+        <ul>
+          <li>AI automates repetitive work — save 20+ hrs/week</li>
+          <li>Custom AI operating system deployed in days</li>
+          <li>Fixed-price packages from $499 — no ongoing salary</li>
+          <li>Centralized AI dashboard — one command center</li>
+          <li>Proactive AI support desk handles customers 24/7</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <h2>Service Packages</h2>
+    <p class="sub">Fixed price. Clear scope. AI delivered.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">⚙️</div>
+        <h3>AI Business Setup</h3>
+        <p>Complete AI operating system for your business — workflows, automations, dashboards, and agent setup.</p>
+        <ul class="service-features">
+          <li>Custom Notion OS with AI integration</li>
+          <li>3 automated workflows (sales, support, content)</li>
+          <li>AI agent configuration & training</li>
+          <li>Dashboard with KPIs & analytics</li>
+          <li>30 days of priority support</li>
+        </ul>
+        <div class="service-price">$499 <span>one-time</span></div>
+        <a href="https://wa.me/8801865385348?text=I'm%20interested%20in%20AI%20Business%20Setup" class="service-cta" target="_blank">Get Started →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🤖</div>
+        <h3>AI Support Desk</h3>
+        <p>AI-powered customer support that works 24/7 — answering questions, routing issues, and keeping customers happy.</p>
+        <ul class="service-features">
+          <li>AI chatbot trained on your business</li>
+          <li>WhatsApp + email + web integration</li>
+          <li>Escalation routing to human team</li>
+          <li>Weekly analytics & improvement reports</li>
+          <li>Ongoing AI model refinement</li>
+        </ul>
+        <div class="service-price">$199 <span>/month</span></div>
+        <a href="https://wa.me/8801865385348?text=I'm%20interested%20in%20AI%20Support%20Desk" class="service-cta" target="_blank">Get Started →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">✍️</div>
+        <h3>AI Content System</h3>
+        <p>AI content engine that generates blogs, social posts, email sequences, and SEO content on autopilot.</p>
+        <ul class="service-features">
+          <li>Content strategy & calendar setup</li>
+          <li>AI writing pipeline (blog + social + email)</li>
+          <li>SEO-optimized content templates</li>
+          <li>Brand voice configuration</li>
+          <li>Monthly content delivery + analytics</li>
+        </ul>
+        <div class="service-price">$299 <span>/month</span></div>
+        <a href="https://wa.me/8801865385348?text=I'm%20interested%20in%20AI%20Content%20System" class="service-cta" target="_blank">Get Started →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏗️</div>
+        <h3>Custom AI Build</h3>
+        <p>Need something specific? We'll design and build a custom AI solution for your unique business challenge.</p>
+        <ul class="service-features">
+          <li>Discovery call & requirements doc</li>
+          <li>Custom AI architecture design</li>
+          <li>Full development & deployment</li>
+          <li>Training & documentation</li>
+          <li>90 days of maintenance included</li>
+        </ul>
+        <div class="service-price" style="font-size:20px">Contact for Quote</div>
+        <a href="https://wa.me/8801865385348?text=I%20need%20a%20custom%20AI%20solution%20—%20let's%20talk" class="service-cta" target="_blank">Book Discovery Call →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="container">
+    <h2>How We Deliver</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Discovery</h4>
+        <p>We analyze your business and identify the highest-impact AI opportunities.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Design</h4>
+        <p>Custom AI architecture designed for your specific workflows and goals.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Deploy</h4>
+        <p>AI system goes live — fully configured, tested, and documented.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>Optimize</h4>
+        <p>Continuous improvement based on real usage data and feedback.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="proof">
+  <div class="container">
+    <h2>By The Numbers</h2>
+    <p class="sub">3+ years of AI systems experience, compressed into productized packages.</p>
+    <div class="proof-grid">
+      <div class="proof-card">
+        <div class="num">500+</div>
+        <div class="label">AI Projects Delivered</div>
+      </div>
+      <div class="proof-card">
+        <div class="num">10</div>
+        <div class="label">AI Agents Running 24/7</div>
+      </div>
+      <div class="proof-card">
+        <div class="num">3+</div>
+        <div class="label">Years AI Engineering</div>
+      </div>
+      <div class="proof-card">
+        <div class="num">24h</div>
+        <div class="label">Avg. Setup Time</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="founder">
+  <div class="container">
+    <div class="founder-card">
+      <div class="founder-avatar">EH</div>
+      <div class="founder-info">
+        <h3>Emon Hossain</h3>
+        <div class="role">Founder & CEO, SYSmoAI</div>
+        <p>3+ years building AI systems. 500+ projects delivered. BBA Marketing from North South University. Based in Dhaka, Bangladesh — building AI infrastructure for emerging markets. Self-funded, product-first, profit-driven.</p>
+        <div class="founder-links">
+          <a href="https://linkedin.com/in/emonhossainpro" target="_blank">LinkedIn →</a>
+          <a href="https://wa.me/8801865385348" target="_blank">WhatsApp →</a>
+          <a href="mailto:ceo@sysmoai.com">ceo@sysmoai.com →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="container">
+    <h2>Ready to AI-Power Your Business?</h2>
+    <p>Pick a package above or message us for a custom solution. We respond within 2 hours.</p>
+    <a href="https://wa.me/8801865385348?text=Hi%20SYSmoAI%20—%20I%20want%20to%20AI-power%20my%20business" class="btn-primary" target="_blank">📱 Start on WhatsApp</a>
+    <p style="color:#475569;margin-top:16px;font-size:14px">Or email <a href="mailto:ceo@sysmoai.com" style="color:#38BDF8">ceo@sysmoai.com</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p><strong>SYSmoAI Private Limited</strong></p>
+    <p style="margin-top:8px">House 15, Road 12, Gulshan 1, Dhaka 1212, Bangladesh</p>
+    <p class="footer-email"><a href="mailto:ceo@sysmoai.com">ceo@sysmoai.com</a> · <a href="https://wa.me/8801865385348">+880 1865-385348</a></p>
+    <p style="margin-top:20px;color:#334155;font-size:12px">© 2026 SYSmoAI. Product company — not an agency, consultancy, or dev shop.</p>
+  </div>
+</footer>
+
+</body>
+</html>
